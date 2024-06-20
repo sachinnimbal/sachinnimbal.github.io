@@ -176,12 +176,15 @@ html {
 }
 
 body {
-  background: var(--smoky-black);
+  background: url(../images/bg-main.svg);
+  background-size: cover;
 }
 
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
+
+
 
 .sidebar,
 article {
@@ -336,6 +339,42 @@ main {
   min-width: 259px;
 }
 
+@keyframes float1 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+.triangle-float1 {
+  animation: float1 6s ease-in-out infinite;
+}
+@keyframes float2 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+}
+.triangle-float2 {
+  animation: float2 5s ease-in-out infinite;
+}
+@keyframes float3 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -10px);
+  }
+}
+.triangle-float3 {
+  animation: float3 7s ease-in-out infinite;
+}
 /*-----------------------------------*\
   #SIDEBAR
 \*-----------------------------------*/
