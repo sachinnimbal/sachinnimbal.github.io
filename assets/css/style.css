@@ -1426,18 +1426,22 @@ textarea.form-input::-webkit-resizer {
 .form-btn:disabled:hover::before {
   background: var(--bg-gradient-jet);
 }
-
+.info-text{
+  text-align: justify;
+}
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
-@media (max-width: 768px) {
-  .container {
-      flex-direction: column;
-  }
-}
+
 /**
  * responsive larger than 450px screen
  */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
 
 @media (min-width: 450px) {
   /**
@@ -1451,10 +1455,6 @@ textarea.form-input::-webkit-resizer {
   /**
    * #PORTFOLIO, BLOG 
    */
-
-  .container {
-    flex-direction: column;
-  }
 
   .project-img,
   .blog-banner-box {
@@ -1720,10 +1720,6 @@ textarea.form-input::-webkit-resizer {
    * #RESUME
    */
 
-  .container {
-    flex-direction: column;
-  }
-
   .timeline-list {
     margin-left: 65px;
   }
@@ -1877,10 +1873,6 @@ textarea.form-input::-webkit-resizer {
   }
 
   /* portfolio and blog grid */
-
-  .container {
-    flex-direction: column;
-  }
 
   .project-list,
   .blog-posts-list {
