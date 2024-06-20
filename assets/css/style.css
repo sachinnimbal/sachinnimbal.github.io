@@ -944,6 +944,10 @@ main {
   line-height: 1.6;
 }
 
+.info-text{
+  text-align: justify;
+}
+
 /**
  * skills 
  */
