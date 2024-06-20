@@ -873,6 +873,17 @@ main {
   margin-bottom: 30px;
 }
 
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education,
+.experience {
+  flex: 1;
+  margin: 0 20px;
+}
+
 .timeline .title-wrapper {
   display: flex;
   align-items: center;
@@ -1419,7 +1430,11 @@ textarea.form-input::-webkit-resizer {
 /*-----------------------------------*\
   #RESPONSIVE
 \*-----------------------------------*/
-
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+  }
+}
 /**
  * responsive larger than 450px screen
  */
@@ -1436,6 +1451,10 @@ textarea.form-input::-webkit-resizer {
   /**
    * #PORTFOLIO, BLOG 
    */
+
+  .container {
+    flex-direction: column;
+  }
 
   .project-img,
   .blog-banner-box {
@@ -1701,6 +1720,10 @@ textarea.form-input::-webkit-resizer {
    * #RESUME
    */
 
+  .container {
+    flex-direction: column;
+  }
+
   .timeline-list {
     margin-left: 65px;
   }
@@ -1854,6 +1877,10 @@ textarea.form-input::-webkit-resizer {
   }
 
   /* portfolio and blog grid */
+
+  .container {
+    flex-direction: column;
+  }
 
   .project-list,
   .blog-posts-list {
