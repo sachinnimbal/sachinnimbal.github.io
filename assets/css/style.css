@@ -944,7 +944,7 @@ main {
   line-height: 1.6;
 }
 
-.info-text{
+.info-text {
   text-align: justify;
 }
 
@@ -1430,7 +1430,7 @@ textarea.form-input::-webkit-resizer {
 .form-btn:disabled:hover::before {
   background: var(--bg-gradient-jet);
 }
-.info-text{
+.info-text {
   text-align: justify;
 }
 /*-----------------------------------*\
@@ -1442,6 +1442,11 @@ textarea.form-input::-webkit-resizer {
  */
 
 @media (max-width: 768px) {
+  .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
   .container {
     flex-direction: column;
   }
@@ -1531,6 +1536,9 @@ textarea.form-input::-webkit-resizer {
    */
 
   .sidebar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     max-height: 180px;
     margin-bottom: 30px;
   }
