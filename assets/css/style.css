@@ -531,6 +531,10 @@ main {
   font-size: var(--fs-7);
 }
 
+.contact-info .contact-link:hover{
+  color: var(--orange-yellow-crayola);
+}
+
 .contact-info address {
   font-style: normal;
 }
