@@ -1,6 +1,4 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
+
 :root {
   /**
    * colors
@@ -550,13 +548,14 @@ main {
   font-size: 24px;
 }
 
+.social-link:visited {
+  color: var(--orange-yellow-crayola);
+}
+
 .social-item .social-link:hover {
   color: var(--light-gray);
 }
 
-.social-link:visited {
-  color: var(--orange-yellow-crayola);
-}
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
@@ -1147,12 +1146,12 @@ main {
 .project-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
-  margin-bottom: 10px;
+  gap: 10px;
 }
 
 .project-item {
   display: none;
+  margin-bottom: 50px;
 }
 
 .project-item.active {
