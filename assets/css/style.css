@@ -2,6 +2,9 @@
   #style.css
 \*-----------------------------------*/
 
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
 :root {
   /**
    * colors
@@ -594,7 +597,7 @@ main {
 
 .navbar-link.active {
   padding: 8px 12px;
-  border-radius: 50% 2%;
+  border-radius: 50% 0%;
   background-color: var(--orange-yellow-crayola);
   color: black;
 }
