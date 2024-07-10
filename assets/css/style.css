@@ -1,4 +1,3 @@
-
 :root {
   /**
    * colors
@@ -528,7 +527,7 @@ main {
   font-size: var(--fs-7);
 }
 
-.contact-info .contact-link:hover{
+.contact-info .contact-link:hover {
   color: var(--orange-yellow-crayola);
 }
 
@@ -595,9 +594,9 @@ main {
 
 .navbar-link.active {
   padding: 8px 12px;
-  border-radius: 50% 0%;
-  background-color: var(--orange-yellow-crayola);
-  color: black;
+  border-radius: 50% 2%;
+  background: var(--border-gradient-onyx);
+  color: var(--white-1);
 }
 
 /*-----------------------------------*\
