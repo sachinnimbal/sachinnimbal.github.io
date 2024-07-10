@@ -554,6 +554,9 @@ main {
   color: var(--light-gray);
 }
 
+.social-link:visited {
+  color: var(--orange-yellow-crayola);
+}
 /*-----------------------------------*\
   #NAVBAR
 \*-----------------------------------*/
