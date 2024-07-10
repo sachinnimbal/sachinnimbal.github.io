@@ -593,7 +593,10 @@ main {
 }
 
 .navbar-link.active {
-  color: var(--orange-yellow-crayola);
+  padding: 8px 12px;
+  border-radius: 50% 2%;
+  background-color: var(--orange-yellow-crayola);
+  color: black;
 }
 
 /*-----------------------------------*\
