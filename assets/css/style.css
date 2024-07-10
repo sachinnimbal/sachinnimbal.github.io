@@ -1150,7 +1150,6 @@ main {
 
 .project-item {
   display: none;
-  margin-bottom: 50px;
 }
 
 .project-item.active {
@@ -1929,6 +1928,10 @@ textarea.form-input::-webkit-resizer {
   .project-list,
   .blog-posts-list {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .project-item{
+    margin-bottom: 50px;
   }
 
   /**
