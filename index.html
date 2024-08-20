@@ -15,7 +15,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 
 </head>
 
@@ -40,7 +39,6 @@
 
                 <button class="info_more-btn" data-sidebar-btn>
                     <span>Show Contacts</span>
-
                     <ion-icon name="chevron-down"></ion-icon>
                 </button>
 
@@ -89,7 +87,8 @@
                         <div class="contact-info">
                             <p class="contact-title">Birthday</p>
 
-                            <time datetime="1999-08-16">August 16, 1999</time>
+                            <time id="birthday" datetime="1999-08-16">August 16, 1999</time>
+                            <span id="age"></span>
                         </div>
 
                     </li>
@@ -112,8 +111,7 @@
 
                 <div class="separator"></div>
 
-               
-                    <ul class="social-list">
+                <ul class="social-list">
 
                     <li class="social-item">
                         <a href="https://www.linkedin.com/in/sachin-nimbal/" target="_blank" class="social-link">
@@ -146,6 +144,7 @@
                     </li>
 
                 </ul>
+
             </div>
 
         </aside>
@@ -352,7 +351,7 @@
 
                                     <h4 class="h4 timeline-item-title">Fresher</h4>
 
-                                    <!-- <span>2024 — Present</span> -->
+                                    <!-- <span>2015 — Present</span> -->
 
                                     <p class="timeline-text info-text">
                                         I am
@@ -571,6 +570,7 @@
 
                             </a>
                         </li>
+
                         <li class="project-item active" data-filter-item data-category="applications">
                             <a href="https://github.com/sachinnimbal/SUKApp" target="_blank">
 
@@ -589,6 +589,7 @@
 
                             </a>
                         </li>
+
                         <li class="project-item active" data-filter-item data-category="web design">
                             <a href="https://github.com/sachinnimbal/CIE" target="_blank">
 
@@ -709,6 +710,8 @@
     <script src="assets/js/script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+
 
     <script>
         class HoverEffect {
@@ -784,6 +787,38 @@
 
         document.querySelectorAll('.service-item, .avatar-box, .navbar-item').forEach(item => {
             new HoverEffect(item);
+        });
+    </script>
+
+    <script>
+        function calculateAge(birthday) {
+            const birthDate = new Date(birthday);
+            const today = new Date();
+
+            let years = today.getFullYear() - birthDate.getFullYear();
+            let months = today.getMonth() - birthDate.getMonth();
+            let days = today.getDate() - birthDate.getDate();
+
+            if (days < 0) {
+                months--;
+                days += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); 
+            }
+
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            return `${years} years ${days} days`;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const birthdayElement = document.getElementById("birthday");
+            const birthday = birthdayElement.getAttribute("datetime");
+            const ageText = calculateAge(birthday);
+
+            const ageElement = document.getElementById("age");
+            ageElement.textContent = `(${ageText})`;
         });
     </script>
 
