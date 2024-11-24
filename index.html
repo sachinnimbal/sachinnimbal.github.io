@@ -789,37 +789,43 @@
         });
     </script>
 
-    <script>
-        function calculateAge(birthday) {
-            const birthDate = new Date(birthday);
-            const today = new Date();
+Got it! Here's the updated script to display only the years and days:
 
-            let years = today.getFullYear() - birthDate.getFullYear();
-            let months = today.getMonth() - birthDate.getMonth();
-            let days = today.getDate() - birthDate.getDate();
+```html
+<script>
+    function calculateAge(birthday) {
+        const birthDate = new Date(birthday);
+        const today = new Date();
 
-            if (days < 0) {
-                months--;
-                days += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); 
-            }
+        let years = today.getFullYear() - birthDate.getFullYear();
+        let months = today.getMonth() - birthDate.getMonth();
+        let days = today.getDate() - birthDate.getDate();
 
-            if (months < 0) {
-                years--;
-                months += 12;
-            }
-
-            return `${years} years ${days} days`;
+        if (days < 0) {
+            months--;
+            days += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); 
         }
 
-        document.addEventListener("DOMContentLoaded", function () {
-            const birthdayElement = document.getElementById("birthday");
-            const birthday = birthdayElement.getAttribute("datetime");
-            const ageText = calculateAge(birthday);
+        if (months < 0) {
+            years--;
+            months += 12;
+        }
 
-            const ageElement = document.getElementById("age");
-            ageElement.textContent = `(${ageText})`;
-        });
-    </script>
+        // Calculate total days excluding full years
+        const totalDays = Math.floor((today - new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate())) / (1000 * 60 * 60 * 24));
+
+        return `${years} years ${totalDays} days`;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const birthdayElement = document.getElementById("birthday");
+        const birthday = birthdayElement.getAttribute("datetime");
+        const ageText = calculateAge(birthday);
+
+        const ageElement = document.getElementById("age");
+        ageElement.textContent = `(${ageText})`;
+    });
+</script>
 
 </body>
 
