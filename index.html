@@ -717,14 +717,23 @@
             const today = new Date();
     
             let years = today.getFullYear() - birthDate.getFullYear();
-            let days = Math.floor((today - new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate())) / (1000 * 60 * 60 * 24));
+            let months = today.getMonth() - birthDate.getMonth();
+            let days = today.getDate() - birthDate.getDate();
     
+            // Adjust days and months if days are negative
             if (days < 0) {
-                years--;
-                days = Math.floor((today - new Date(today.getFullYear() - 1, birthDate.getMonth(), birthDate.getDate())) / (1000 * 60 * 60 * 24));
+                months--;
+                const previousMonth = new Date(today.getFullYear(), today.getMonth(), 0);
+                days += previousMonth.getDate();
             }
     
-            return `${years} years ${days} days`;
+            // Adjust years if months are negative
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+    
+            return `${years} years ${months} months ${days} days`;
         }
     
         function formatDate(dateString) {
