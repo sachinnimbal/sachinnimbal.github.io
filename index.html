@@ -15,7 +15,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+    <script>
+        function calculateAge(birthday) {
+            const birthDate = new Date(birthday);
+            const today = new Date();
 
+            let years = today.getFullYear() - birthDate.getFullYear();
+            let months = today.getMonth() - birthDate.getMonth();
+            let days = today.getDate() - birthDate.getDate();
+
+            if (days < 0) {
+                months--;
+                days += new Date(today.getFullYear(), today.getMonth(), 0).getDate(); 
+            }
+
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            // Calculate total days excluding full years
+            const totalDays = Math.floor((today - new Date(today.getFullYear(), birthDate.getMonth(), birthDate.getDate())) / (1000 * 60 * 60 * 24));
+
+            return `${years} years ${totalDays} days`;
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const birthdayElement = document.getElementById("birthday");
+            const birthday = birthdayElement.getAttribute("datetime");
+            const ageText = calculateAge(birthday);
+
+            const ageElement = document.getElementById("age");
+            ageElement.textContent = `(${ageText})`;
+        });
+    </script>
 </head>
 
 <body>
