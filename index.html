@@ -390,6 +390,75 @@
             </div>
           </section>
 
+          <!-- PDF Viewer Section -->
+          <section class="pdf-viewer-section">
+            <div class="pdf-viewer-header">
+              <h3 class="pdf-viewer-title">
+                <i class="fas fa-file-pdf"></i>
+                Resume Document
+              </h3>
+              <div class="pdf-controls">
+                <div class="zoom-controls">
+                  <button class="zoom-btn" onclick="zoomOut()">
+                    <i class="fas fa-minus"></i>
+                  </button>
+                  <span class="zoom-level">100%</span>
+                  <button class="zoom-btn" onclick="zoomIn()">
+                    <i class="fas fa-plus"></i>
+                  </button>
+                </div>
+                <a
+                  href="assets/resume/SACHIN_NIMBAL_Java-Developer-Resume.pdf"
+                  target="_blank"
+                  class="pdf-btn"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                  Open Full
+                </a>
+                <a
+                  href="assets/resume/SACHIN_NIMBAL_Java-Developer-Resume.pdf"
+                  download="SACHIN_NIMBAL_Resume.pdf"
+                  class="pdf-btn"
+                >
+                  <i class="fas fa-download"></i>
+                  Download
+                </a>
+              </div>
+            </div>
+
+            <div class="pdf-container">
+              <div class="pdf-loading" id="pdfLoading">
+                <div class="loading-spinner"></div>
+              </div>
+
+              <embed
+                id="pdfEmbed"
+                src="assets/resume/SACHIN_NIMBAL_Java-Developer-Resume.pdf#toolbar=1&navpanes=0&scrollbar=1"
+                type="application/pdf"
+                class="pdf-embed"
+                onload="hideLoading()"
+              />
+
+              <!-- Fallback for browsers that don't support PDF embedding -->
+              <div class="pdf-fallback" style="display: none">
+                <i class="fas fa-file-pdf"></i>
+                <h4>PDF Preview Not Available</h4>
+                <p>
+                  Your browser doesn't support PDF viewing. Please download or
+                  open in a new tab.
+                </p>
+                <a
+                  href="assets/resume/SACHIN_NIMBAL_Java-Developer-Resume.pdf"
+                  target="_blank"
+                  class="pdf-btn"
+                >
+                  <i class="fas fa-external-link-alt"></i>
+                  View PDF
+                </a>
+              </div>
+            </div>
+          </section>
+
           <section class="skill" id="skills">
             <h3 class="h3 skills-title">My skills</h3>
 
@@ -945,6 +1014,91 @@
         const ageElement = document.getElementById("age");
         ageElement.textContent = `(${ageText})`;
       });
+    </script>
+
+    <script>
+      let currentZoom = 1;
+
+      function hideLoading() {
+        const loading = document.getElementById("pdfLoading");
+        if (loading) {
+          loading.style.display = "none";
+        }
+      }
+
+      function zoomIn() {
+        currentZoom = Math.min(currentZoom + 0.1, 2);
+        updateZoom();
+      }
+
+      function zoomOut() {
+        currentZoom = Math.max(currentZoom - 0.1, 0.5);
+        updateZoom();
+      }
+
+      function updateZoom() {
+        const embed = document.getElementById("pdfEmbed");
+        const zoomLevel = document.querySelector(".zoom-level");
+
+        embed.style.transform = `scale(${currentZoom})`;
+        embed.style.transformOrigin = "top left";
+
+        if (currentZoom !== 1) {
+          embed.style.width = `${100 / currentZoom}%`;
+          embed.style.height = `${100 / currentZoom}%`;
+        } else {
+          embed.style.width = "100%";
+          embed.style.height = "100%";
+        }
+
+        zoomLevel.textContent = `${Math.round(currentZoom * 100)}%`;
+      }
+
+      // Handle PDF loading errors
+      document.getElementById("pdfEmbed").onerror = function () {
+        this.style.display = "none";
+        this.nextElementSibling.style.display = "flex";
+        hideLoading();
+      };
+
+      // Auto-hide loading after 3 seconds as fallback
+      setTimeout(hideLoading, 3000);
+
+      // Mobile optimization for PDF viewing
+      function optimizeForMobile() {
+        const isMobile = window.innerWidth <= 768;
+        const embed = document.getElementById("pdfEmbed");
+
+        if (isMobile) {
+          // Add mobile-specific PDF parameters
+          const src = embed.src.split("#")[0];
+          embed.src =
+            src + "#toolbar=1&navpanes=0&scrollbar=1&view=FitH&zoom=page-width";
+        }
+      }
+
+      // Run on load and resize
+      window.addEventListener("load", optimizeForMobile);
+      window.addEventListener("resize", optimizeForMobile);
+
+      // Prevent zoom on double tap (iOS Safari)
+      let lastTouchEnd = 0;
+      document.addEventListener(
+        "touchend",
+        function (event) {
+          const now = new Date().getTime();
+          if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+          }
+          lastTouchEnd = now;
+        },
+        false
+      );
+
+      // Smooth scrolling for mobile
+      if ("scrollBehavior" in document.documentElement.style) {
+        document.documentElement.style.scrollBehavior = "smooth";
+      }
     </script>
 
     <script>
