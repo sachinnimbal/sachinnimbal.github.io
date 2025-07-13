@@ -2228,12 +2228,6 @@ textarea.form-input::-webkit-resizer {
   border-bottom: 1px solid #333;
 }
 
-.pdf-viewer-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin: 0;
-}
-
 .pdf-controls {
   display: flex;
   gap: 10px;
@@ -2364,10 +2358,6 @@ textarea.form-input::-webkit-resizer {
     align-items: flex-start;
   }
 
-  .pdf-viewer-title {
-    font-size: 1.1rem;
-  }
-
   .pdf-controls {
     width: 100%;
     justify-content: space-between;
@@ -2409,10 +2399,6 @@ textarea.form-input::-webkit-resizer {
     margin-right: -15px;
     padding: 15px;
     border-radius: 8px;
-  }
-
-  .pdf-viewer-title {
-    font-size: 1rem;
   }
 
   .pdf-container {
@@ -2469,10 +2455,6 @@ textarea.form-input::-webkit-resizer {
 
   .pdf-container {
     height: 300px;
-  }
-
-  .pdf-viewer-title {
-    font-size: 0.95rem;
   }
 
   .pdf-btn {
