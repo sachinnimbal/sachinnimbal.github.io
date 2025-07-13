@@ -141,7 +141,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 document.addEventListener("DOMContentLoaded", function () {
   const skillsSection = document.querySelector("#skills");
   const circles = document.querySelectorAll(".progress-ring__circle");
-  const skills = [65, 90, 80, 55, 80, 85, 85, 60, 10];
+  const skills = [65, 55, 90, 80, 55, 80, 85, 85, 40, 30];
 
   circles.forEach((circle, index) => {
     const radius = circle.r.baseVal.value;

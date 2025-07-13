@@ -625,6 +625,21 @@ main {
   text-align: justify;
 }
 
+.dotted-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.dotted-list li {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
 /**
  * #service 
  */

@@ -1,838 +1,1029 @@
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sachin Nimbal</title>
-    <link rel="icon" href="assets/images/favicon.png" type="image/png">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <!--
     - google font link
   -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <main>
+      <aside class="sidebar" data-sidebar>
+        <div class="sidebar-info">
+          <figure class="avatar-box">
+            <img
+              src="./assets/images/profile.jpeg"
+              alt="Sachin Nimbal"
+              width="80"
+            />
+          </figure>
 
-        <aside class="sidebar" data-sidebar>
+          <div class="info-content">
+            <h1 class="name" title="Sachin Nimbal">Sachin Nimbal</h1>
+            <span
+              class="title"
+              data-typed-items="Web Designer, Full Stack Web Developer, Freelancer, Photographer"
+            ></span>
+          </div>
 
-            <div class="sidebar-info">
+          <button class="info_more-btn" data-sidebar-btn>
+            <span>Show Contacts</span>
+            <ion-icon name="chevron-down"></ion-icon>
+          </button>
+        </div>
 
-                <figure class="avatar-box">
-                    <img src="./assets/images/profile.jpeg" alt="Sachin Nimbal" width="80">
-                </figure>
+        <div class="sidebar-info_more">
+          <div class="separator"></div>
 
+          <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
 
-                <div class="info-content">
-                    <h1 class="name" title="Sachin Nimbal">Sachin Nimbal</h1>
-                    <span class="title"
-                        data-typed-items="Web Designer, Full Stack Web Developer, Freelancer, Photographer"></span>
-                </div>
+              <div class="contact-info">
+                <p class="contact-title">Email</p>
 
-                <button class="info_more-btn" data-sidebar-btn>
-                    <span>Show Contacts</span>
-                    <ion-icon name="chevron-down"></ion-icon>
-                </button>
+                <a href="mailto:sachinnimbal9@gmail.com" class="contact-link"
+                  >sachinnimbal9@gmail.com</a
+                >
+              </div>
+            </li>
 
-            </div>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
 
-            <div class="sidebar-info_more">
+              <div class="contact-info">
+                <p class="contact-title">Phone</p>
 
-                <div class="separator"></div>
+                <a href="tel:+919900140463" class="contact-link"
+                  >+919900140463</a
+                >
+              </div>
+            </li>
 
-                <ul class="contacts-list">
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="calendar-outline"></ion-icon>
+              </div>
 
-                    <li class="contact-item">
+              <div class="contact-info">
+                <p class="contact-title">Birthday</p>
+                <time id="birthday" datetime="1999-08-16">August 16, 1999</time>
+                <span id="age"></span>
+              </div>
+            </li>
 
-                        <div class="icon-box">
-                            <ion-icon name="mail-outline"></ion-icon>
-                        </div>
+            <li class="contact-item">
+              <div class="icon-box">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
 
-                        <div class="contact-info">
-                            <p class="contact-title">Email</p>
+              <div class="contact-info">
+                <p class="contact-title">Location</p>
 
-                            <a href="mailto:sachinnimbal9@gmail.com" class="contact-link">sachinnimbal9@gmail.com</a>
-                        </div>
+                <address>Bengaluru, Karnataka, India</address>
+              </div>
+            </li>
+          </ul>
 
-                    </li>
+          <div class="separator"></div>
 
-                    <li class="contact-item">
+          <ul class="social-list">
+            <li class="social-item">
+              <a
+                href="https://www.linkedin.com/in/sachin-nimbal/"
+                target="_blank"
+                class="social-link"
+              >
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+            </li>
 
-                        <div class="icon-box">
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
-                        </div>
+            <li class="social-item">
+              <a
+                href="https://www.facebook.com/sachin.kumar.nimbal9/"
+                target="_blank"
+                class="social-link"
+              >
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
 
-                        <div class="contact-info">
-                            <p class="contact-title">Phone</p>
+            <li class="social-item">
+              <a
+                href="https://github.com/sachinnimbal"
+                target="_blank"
+                class="social-link"
+              >
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
 
-                            <a href="tel:+919900140463" class="contact-link">+919900140463</a>
-                        </div>
+            <li class="social-item">
+              <a
+                href="https://codepen.io/sachinnimbal"
+                target="_blank"
+                class="social-link"
+              >
+                <ion-icon name="logo-codepen"></ion-icon>
+              </a>
+            </li>
 
-                    </li>
+            <li class="social-item">
+              <a
+                href="https://www.instagram.com/sachin.kumar.nimbal/"
+                target="_blank"
+                class="social-link"
+              >
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </aside>
 
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="calendar-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Birthday</p>
-                            <time id="birthday" datetime="1999-08-16">August 16, 1999</time>
-                            <span id="age"></span>
-                        </div>
-
-                    </li>
-
-                    <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="location-outline"></ion-icon>
-                        </div>
-
-                        <div class="contact-info">
-                            <p class="contact-title">Location</p>
-
-                            <address>Bengaluru, Karnataka, India</address>
-                        </div>
-
-                    </li>
-
-                </ul>
-
-                <div class="separator"></div>
-
-                <ul class="social-list">
-
-                    <li class="social-item">
-                        <a href="https://www.linkedin.com/in/sachin-nimbal/" target="_blank" class="social-link">
-                            <ion-icon name="logo-linkedin"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://www.facebook.com/sachin.kumar.nimbal9/" target="_blank" class="social-link">
-                            <ion-icon name="logo-facebook"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://github.com/sachinnimbal" target="_blank" class="social-link">
-                            <ion-icon name="logo-github"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://codepen.io/sachinnimbal" target="_blank" class="social-link">
-                            <ion-icon name="logo-codepen"></ion-icon>
-                        </a>
-                    </li>
-
-                    <li class="social-item">
-                        <a href="https://www.instagram.com/sachin.kumar.nimbal/" target="_blank" class="social-link">
-                            <ion-icon name="logo-instagram"></ion-icon>
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-        </aside>
-
-
-        <div class="main-content">
-
-            <!--
+      <div class="main-content">
+        <!--
               - #NAVBAR
             -->
 
-            <nav class="navbar">
+        <nav class="navbar">
+          <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link active" data-nav-link>About</button>
+            </li>
 
-                <ul class="navbar-list">
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Resume</button>
+            </li>
 
-                    <li class="navbar-item">
-                        <button class="navbar-link  active" data-nav-link>About</button>
-                    </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Portfolio</button>
+            </li>
 
-                    <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Resume</button>
-                    </li>
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Contact</button>
+            </li>
+          </ul>
+        </nav>
 
-                    <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Portfolio</button>
-                    </li>
-
-                    <li class="navbar-item">
-                        <button class="navbar-link" data-nav-link>Contact</button>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-            <!--
+        <!--
               - #ABOUT
             -->
 
-            <article class="about  active" data-page="about">
+        <article class="about active" data-page="about">
+          <header>
+            <h2 class="h2 article-title">About me</h2>
+          </header>
 
-                <header>
-                    <h2 class="h2 article-title">About me</h2>
-                </header>
+          <section class="about-text">
+            <p>
+              A passionate and curious developer with a drive to create
+              impactful digital solutions. Enthusiastic about exploring modern
+              technologies, building meaningful user experiences, and
+              continuously enhancing technical skills. Committed to contributing
+              to the organization and collaborating with innovative teams,
+              bringing efficiency and creativity.
+            </p>
+            <p>
+              I am a Java Developer with a strong foundation in web development
+              and a keen interest in creating responsive, scalable applications.
+              My experience includes working with modern frameworks and
+              technologies to deliver high-quality software solutions.
+            </p>
+            <p>
+              I thrive in dynamic environments, enjoy problem-solving, and am
+              always eager to learn and adapt to new challenges. My goal is to
+              leverage my skills to contribute to impactful projects and drive
+              innovation in the tech industry.
+            </p>
+          </section>
 
-                <section class="about-text">
-                    <p>
-                        I am a passionate Full Stack Web Developer and an MCA graduate from Sharnbasva University with a
-                        BCA background. I have proficiency in Java, SQL, etc, and my expertise spans the complete web
-                        development cycle. Beyond these technologies, I am a quick learner capable of mastering new
-                        technology stacks as needed. I excel in teamwork, creativity, and leadership, and have a keen
-                        interest in photography and outdoor activities. Fluent in Kannada, English, and Hindi.
-                    </p>
-                </section>
+          <section class="service">
+            <h3 class="h3 service-title">What i'm doing</h3>
 
-                <section class="service">
+            <ul class="service-list">
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-design.svg"
+                    alt="design icon"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web design</h4>
+                  <p class="service-item-text">
+                    The most modern and high-quality designs created at a
+                    professional level.
+                  </p>
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-dev.svg"
+                    alt="Web development icon"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web development</h4>
+                  <p class="service-item-text">
+                    High-quality development of websites at the professional
+                    level.
+                  </p>
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-app.svg"
+                    alt="mobile app icon"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Mobile apps</h4>
+                  <p class="service-item-text">
+                    Professional development of Android applications.
+                  </p>
+                </div>
+              </li>
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img
+                    src="./assets/images/icon-photo.svg"
+                    alt="camera icon"
+                    width="40"
+                  />
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Photography</h4>
+                  <p class="service-item-text">
+                    I capture high-quality photos of any category at a
+                    professional level.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </section>
+        </article>
 
-                    <h3 class="h3 service-title">What i'm doing</h3>
-
-                    <ul class="service-list">
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Web design</h4>
-                                <p class="service-item-text">
-                                    The most modern and high-quality designs created at a professional level.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Web development</h4>
-                                <p class="service-item-text">
-                                    High-quality development of websites at the professional level.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Mobile apps</h4>
-                                <p class="service-item-text">
-                                    Professional development of Android applications.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="service-item">
-                            <div class="service-icon-box">
-                                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
-                            </div>
-                            <div class="service-content-box">
-                                <h4 class="h4 service-item-title">Photography</h4>
-                                <p class="service-item-text">
-                                    I capture high-quality photos of any category at a professional level.
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-
-
-                </section>
-
-
-            </article>
-
-            <!--
+        <!--
               - #RESUME
             -->
 
-            <article class="resume" data-page="resume">
+        <article class="resume" data-page="resume">
+          <header>
+            <h2 class="h2 article-title">Resume</h2>
+          </header>
 
-                <header>
-                    <h2 class="h2 article-title">Resume</h2>
-                </header>
+          <section class="timeline">
+            <div class="container">
+              <div class="education">
+                <div class="title-wrapper">
+                  <div class="icon-box">
+                    <ion-icon name="book-outline"></ion-icon>
+                  </div>
 
-                <section class="timeline">
+                  <h3 class="h3">Education</h3>
+                </div>
 
-                    <div class="container">
+                <ol class="timeline-list">
+                  <li class="timeline-item">
+                    <h4 class="h4 timeline-item-title">
+                      MCA - Master of Computer Applications
+                    </h4>
 
-                        <div class="education">
+                    <span>02/2022 - 09/2023</span>
 
-                            <div class="title-wrapper">
-                                <div class="icon-box">
-                                    <ion-icon name="book-outline"></ion-icon>
-                                </div>
+                    <p class="timeline-text">
+                      Sharnbasva University, Kalaburagi
+                    </p>
+                  </li>
 
-                                <h3 class="h3">Education</h3>
-                            </div>
+                  <li class="timeline-item">
+                    <h4 class="h4 timeline-item-title">
+                      BCA - Bachelor of Computer Applications
+                    </h4>
 
-                            <ol class="timeline-list">
+                    <span>07/2018 - 09/2021</span>
 
-                                <li class="timeline-item">
+                    <p class="timeline-text">
+                      Sharnbasva University, Kalaburagi
+                    </p>
+                  </li>
 
-                                    <h4 class="h4 timeline-item-title">MCA - Master of Computer Applications</h4>
+                  <li class="timeline-item">
+                    <h4 class="h4 timeline-item-title">12th Board - PUC</h4>
 
-                                    <span>02/2022 - 09/2023</span>
+                    <span>04/2015 - 05/2018</span>
 
-                                    <p class="timeline-text">
-                                        Sharnbasva University, Kalaburagi
-                                    </p>
+                    <p class="timeline-text">
+                      Nalanda Ind. PU College, Kalaburagi
+                    </p>
+                  </li>
 
-                                </li>
+                  <li class="timeline-item">
+                    <h4 class="h4 timeline-item-title">10th Board - SSLC</h4>
 
-                                <li class="timeline-item">
+                    <span>04/2014 - 04/2015</span>
 
-                                    <h4 class="h4 timeline-item-title">BCA - Bachelor of Computer Applications</h4>
+                    <p class="timeline-text">
+                      Vinayaka Education Society, Shorapur
+                    </p>
+                  </li>
+                </ol>
+              </div>
 
-                                    <span>07/2018 - 09/2021</span>
+              <div class="experience">
+                <div class="title-wrapper">
+                  <div class="icon-box">
+                    <i class="fa-solid fa-briefcase"></i>
+                  </div>
 
-                                    <p class="timeline-text">
-                                        Sharnbasva University, Kalaburagi
-                                    </p>
+                  <h3 class="h3">Experience</h3>
+                </div>
 
-                                </li>
+                <ol class="timeline-list">
+                  <li class="timeline-item">
+                    <h4 class="h4 timeline-item-title">
+                      HG Infotech <i>(Part of PGC Digital - CMMI Level 3)</i>
+                    </h4>
+                    <span>October 2024 — Present</span>
+                    <p class="timeline-text info-text">
+                      Working as a Software Developer, contributing to the
+                      development of web applications using Java, Spring Boot,
+                      and MongoDB.
+                    </p>
+                  </li>
+                  <li class="timeline-item">
+                    <h4 class="h4 timeline-item-title">Future Opportunities</h4>
+                    <span>Looking forward to new challenges</span>
+                    <p class="timeline-text info-text">
+                      Open to exploring new opportunities in software
+                      development...
+                    </p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </section>
 
-                                <li class="timeline-item">
+          <section class="skill" id="skills">
+            <h3 class="h3 skills-title">My skills</h3>
 
-                                    <h4 class="h4 timeline-item-title">12th Board - PUC</h4>
+            <div class="skill-section">
+              <div class="skill-container">
+                <div class="circle">
+                  <svg class="progress-ring">
+                    <circle
+                      class="progress-ring__background"
+                      stroke="#010101"
+                      stroke-width="10"
+                      fill="transparent"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                    <circle
+                      class="progress-ring__circle"
+                      stroke="#ff36f8d4"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                  </svg>
+                  <i class="icon fa-brands fa-java"></i>
+                  <span class="skill-text">Java</span>
+                </div>
+                <div class="circle">
+                  <svg class="progress-ring">
+                    <circle
+                      class="progress-ring__background"
+                      stroke="#010101"
+                      stroke-width="10"
+                      fill="transparent"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                    <circle
+                      class="progress-ring__circle"
+                      stroke="#ff36f8d4"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                  </svg>
+                  <i class="icon fa-solid fa-leaf"></i>
+                  <span class="skill-text">SpringBoot</span>
+                </div>
+                <div class="circle">
+                  <svg class="progress-ring">
+                    <circle
+                      class="progress-ring__background"
+                      stroke="#010101"
+                      stroke-width="10"
+                      fill="transparent"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                    <circle
+                      class="progress-ring__circle"
+                      stroke="#ff36f8d4"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                  </svg>
+                  <i class="icon fa-brands fa-html5"></i>
+                  <span class="skill-text">HTML</span>
+                </div>
+                <div class="circle">
+                  <svg class="progress-ring">
+                    <circle
+                      class="progress-ring__background"
+                      stroke="#010101"
+                      stroke-width="10"
+                      fill="transparent"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                    <circle
+                      class="progress-ring__circle"
+                      stroke="#ff36f8d4"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                  </svg>
+                  <i class="icon fa-brands fa-css3-alt"></i>
+                  <span class="skill-text">CSS</span>
+                </div>
+                <div class="circle">
+                  <svg class="progress-ring">
+                    <circle
+                      class="progress-ring__background"
+                      stroke="#010101"
+                      stroke-width="10"
+                      fill="transparent"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                    <circle
+                      class="progress-ring__circle"
+                      stroke="#ff36f8d4"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                  </svg>
+                  <i class="icon fa-brands fa-js"></i>
+                  <span class="skill-text">JavaScript</span>
+                </div>
+                <div class="circle">
+                  <svg class="progress-ring">
+                    <circle
+                      class="progress-ring__background"
+                      stroke="#010101"
+                      stroke-width="10"
+                      fill="transparent"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                    <circle
+                      class="progress-ring__circle"
+                      stroke="#ff36f8d4"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                  </svg>
+                  <i class="icon fa-brands fa-php"></i>
+                  <span class="skill-text">PHP</span>
+                </div>
+                <div class="circle">
+                  <svg class="progress-ring">
+                    <circle
+                      class="progress-ring__background"
+                      stroke="#010101"
+                      stroke-width="10"
+                      fill="transparent"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                    <circle
+                      class="progress-ring__circle"
+                      stroke="#ff36f8d4"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                  </svg>
+                  <i class="icon fa-solid fa-database"></i>
+                  <span class="skill-text">SQL</span>
+                </div>
+                <div class="circle">
+                  <svg class="progress-ring">
+                    <circle
+                      class="progress-ring__background"
+                      stroke="#010101"
+                      stroke-width="10"
+                      fill="transparent"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                    <circle
+                      class="progress-ring__circle"
+                      stroke="#ff36f8d4"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                  </svg>
+                  <i class="icon fa-brands fa-bootstrap"></i>
+                  <span class="skill-text">Bootstrap</span>
+                </div>
+                <div class="circle">
+                  <svg class="progress-ring">
+                    <circle
+                      class="progress-ring__background"
+                      stroke="#010101"
+                      stroke-width="10"
+                      fill="transparent"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                    <circle
+                      class="progress-ring__circle"
+                      stroke="#ff36f8d4"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                  </svg>
+                  <ion-icon class="icon" name="logo-firebase"></ion-icon>
+                  <span class="skill-text">Firebase</span>
+                </div>
+                <div class="circle">
+                  <svg class="progress-ring">
+                    <circle
+                      class="progress-ring__background"
+                      stroke="#010101"
+                      stroke-width="10"
+                      fill="transparent"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                    <circle
+                      class="progress-ring__circle"
+                      stroke="#ff36f8d4"
+                      cx="100"
+                      cy="100"
+                      r="90"
+                    />
+                  </svg>
+                  <ion-icon class="icon" name="logo-react"></ion-icon>
+                  <span class="skill-text">React JS</span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </article>
 
-                                    <span>04/2015 - 05/2018</span>
-
-                                    <p class="timeline-text">
-                                        Nalanda Ind. PU College, Kalaburagi
-                                    </p>
-
-                                </li>
-
-                                <li class="timeline-item">
-
-                                    <h4 class="h4 timeline-item-title">10th Board - SSLC</h4>
-
-                                    <span>04/2014 - 04/2015</span>
-
-                                    <p class="timeline-text">
-                                        Vinayaka Education Society, Shorapur
-                                    </p>
-
-                                </li>
-
-                            </ol>
-
-                        </div>
-
-                        <div class="experience">
-
-                            <div class="title-wrapper">
-                                <div class="icon-box">
-                                    <i class="fa-solid fa-briefcase"></i>
-                                </div>
-
-                                <h3 class="h3">Experience</h3>
-                            </div>
-
-                            <ol class="timeline-list">
-
-                                <li class="timeline-item">
-
-                                    <h4 class="h4 timeline-item-title">Fresher</h4>
-
-                                    <!-- <span>2015 — Present</span> -->
-
-                                    <p class="timeline-text info-text">
-                                        I am
-                                        actively seeking job opportunities where I can contribute to organizational
-                                        success
-                                        through
-                                        continuous professional growth.
-                                    </p>
-
-                                </li>
-
-                            </ol>
-
-                        </div>
-                    </div>
-
-                </section>
-
-                <section class="skill" id="skills">
-
-                    <h3 class="h3 skills-title">My skills</h3>
-
-                    <div class="skill-section">
-                        <div class="skill-container">
-                            <div class="circle">
-                                <svg class="progress-ring">
-                                    <circle class="progress-ring__background" stroke="#010101" stroke-width="10"
-                                        fill="transparent" cx="100" cy="100" r="90" />
-                                    <circle class="progress-ring__circle" stroke="#ff36f8d4" cx="100" cy="100" r="90" />
-                                </svg>
-                                <i class="icon fa-brands fa-java"></i>
-                                <span class="skill-text">Java</span>
-                            </div>
-                            <div class="circle">
-                                <svg class="progress-ring">
-                                    <circle class="progress-ring__background" stroke="#010101" stroke-width="10"
-                                        fill="transparent" cx="100" cy="100" r="90" />
-                                    <circle class="progress-ring__circle" stroke="#ff36f8d4" cx="100" cy="100" r="90" />
-                                </svg>
-                                <i class="icon fa-brands fa-html5"></i>
-                                <span class="skill-text">HTML</span>
-                            </div>
-                            <div class="circle">
-                                <svg class="progress-ring">
-                                    <circle class="progress-ring__background" stroke="#010101" stroke-width="10"
-                                        fill="transparent" cx="100" cy="100" r="90" />
-                                    <circle class="progress-ring__circle" stroke="#ff36f8d4" cx="100" cy="100" r="90" />
-                                </svg>
-                                <i class="icon fa-brands fa-css3-alt"></i>
-                                <span class="skill-text">CSS</span>
-                            </div>
-                            <div class="circle">
-                                <svg class="progress-ring">
-                                    <circle class="progress-ring__background" stroke="#010101" stroke-width="10"
-                                        fill="transparent" cx="100" cy="100" r="90" />
-                                    <circle class="progress-ring__circle" stroke="#ff36f8d4" cx="100" cy="100" r="90" />
-                                </svg>
-                                <i class="icon fa-brands fa-js"></i>
-                                <span class="skill-text">Java Script</span>
-                            </div>
-                            <div class="circle">
-                                <svg class="progress-ring">
-                                    <circle class="progress-ring__background" stroke="#010101" stroke-width="10"
-                                        fill="transparent" cx="100" cy="100" r="90" />
-                                    <circle class="progress-ring__circle" stroke="#ff36f8d4" cx="100" cy="100" r="90" />
-                                </svg>
-                                <i class="icon fa-brands fa-php"></i>
-                                <span class="skill-text">PHP</span>
-                            </div>
-                            <div class="circle">
-                                <svg class="progress-ring">
-                                    <circle class="progress-ring__background" stroke="#010101" stroke-width="10"
-                                        fill="transparent" cx="100" cy="100" r="90" />
-                                    <circle class="progress-ring__circle" stroke="#ff36f8d4" cx="100" cy="100" r="90" />
-                                </svg>
-                                <i class="icon fa-solid fa-database"></i>
-                                <span class="skill-text">SQL</span>
-                            </div>
-                            <div class="circle">
-                                <svg class="progress-ring">
-                                    <circle class="progress-ring__background" stroke="#010101" stroke-width="10"
-                                        fill="transparent" cx="100" cy="100" r="90" />
-                                    <circle class="progress-ring__circle" stroke="#ff36f8d4" cx="100" cy="100" r="90" />
-                                </svg>
-                                <i class="icon fa-brands fa-bootstrap"></i>
-                                <span class="skill-text">Bootstrap</span>
-                            </div>
-                            <div class="circle">
-                                <svg class="progress-ring">
-                                    <circle class="progress-ring__background" stroke="#010101" stroke-width="10"
-                                        fill="transparent" cx="100" cy="100" r="90" />
-                                    <circle class="progress-ring__circle" stroke="#ff36f8d4" cx="100" cy="100" r="90" />
-                                </svg>
-                                <ion-icon class="icon" name="logo-firebase"></ion-icon>
-                                <span class="skill-text">Firebase</span>
-                            </div>
-                            <!-- <div class="circle">
-                                <svg class="progress-ring">
-                                    <circle class="progress-ring__background" stroke="#010101" stroke-width="10"
-                                        fill="transparent" cx="100" cy="100" r="90" />
-                                    <circle class="progress-ring__circle" stroke="#ff36f8d4" cx="100" cy="100" r="90" />
-                                </svg>
-                                <ion-icon class="icon" name="logo-react"></ion-icon>
-                                <span class="skill-text">React JS</span>
-                            </div> -->
-                        </div>
-                    </div>
-
-                </section>
-
-            </article>
-
-
-            <!--
+        <!--
               - #PORTFOLIO
             -->
 
-            <article class="portfolio" data-page="portfolio">
+        <article class="portfolio" data-page="portfolio">
+          <header>
+            <h2 class="h2 article-title">Portfolio</h2>
+          </header>
 
-                <header>
-                    <h2 class="h2 article-title">Portfolio</h2>
-                </header>
+          <section class="projects">
+            <ul class="filter-list">
+              <li class="filter-item">
+                <button class="active" data-filter-btn>All</button>
+              </li>
 
-                <section class="projects">
+              <li class="filter-item">
+                <button data-filter-btn>Web design</button>
+              </li>
 
-                    <ul class="filter-list">
+              <li class="filter-item">
+                <button data-filter-btn>Applications</button>
+              </li>
 
-                        <li class="filter-item">
-                            <button class="active" data-filter-btn>All</button>
-                        </li>
+              <li class="filter-item">
+                <button data-filter-btn>Web development</button>
+              </li>
+            </ul>
 
-                        <li class="filter-item">
-                            <button data-filter-btn>Web design</button>
-                        </li>
+            <div class="filter-select-box">
+              <button class="filter-select" data-select>
+                <div class="select-value" data-selecct-value>
+                  Select category
+                </div>
 
-                        <li class="filter-item">
-                            <button data-filter-btn>Applications</button>
-                        </li>
+                <div class="select-icon">
+                  <ion-icon name="chevron-down"></ion-icon>
+                </div>
+              </button>
 
-                        <li class="filter-item">
-                            <button data-filter-btn>Web development</button>
-                        </li>
+              <ul class="select-list">
+                <li class="select-item">
+                  <button data-select-item>All</button>
+                </li>
 
-                    </ul>
+                <li class="select-item">
+                  <button data-select-item>Web design</button>
+                </li>
 
-                    <div class="filter-select-box">
+                <li class="select-item">
+                  <button data-select-item>Applications</button>
+                </li>
 
-                        <button class="filter-select" data-select>
+                <li class="select-item">
+                  <button data-select-item>Web development</button>
+                </li>
+              </ul>
+            </div>
 
-                            <div class="select-value" data-selecct-value>Select category</div>
-
-                            <div class="select-icon">
-                                <ion-icon name="chevron-down"></ion-icon>
-                            </div>
-
-                        </button>
-
-                        <ul class="select-list">
-
-                            <li class="select-item">
-                                <button data-select-item>All</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>Web design</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>Applications</button>
-                            </li>
-
-                            <li class="select-item">
-                                <button data-select-item>Web development</button>
-                            </li>
-
-                        </ul>
-
+            <ul class="project-list">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a
+                  href="https://github.com/sachinnimbal/Food-Delivery-Web-App"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
                     </div>
 
-                    <ul class="project-list">
+                    <img
+                      src="./assets/images/ProjectImages/Food Delivery.png"
+                      alt="Food App"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                        <li class="project-item  active" data-filter-item data-category="web development">
-                            <a href="https://github.com/sachinnimbal/Food-Delivery-Web-App" target="_blank">
+                  <h3 class="project-title">FOOD DELIVERY WEB APP</h3>
 
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
+                  <p class="project-category">Java & SQL</p>
+                </a>
+              </li>
 
-                                    <img src="./assets/images/ProjectImages/Food Delivery.png" alt="Food App"
-                                        loading="lazy">
-                                </figure>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a
+                  href="https://github.com/sachinnimbal/INVOICE-MAKING-WEB-APP"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-                                <h3 class="project-title">FOOD DELIVERY WEB APP</h3>
+                    <img
+                      src="./assets/images/ProjectImages/Invoicing.png"
+                      alt="Invoicing"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                                <p class="project-category">Java & SQL</p>
+                  <h3 class="project-title">INVOICE MAKING WEB APP</h3>
 
-                            </a>
-                        </li>
+                  <p class="project-category">PHP</p>
+                </a>
+              </li>
 
-                        <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="https://github.com/sachinnimbal/INVOICE-MAKING-WEB-APP" target="_blank">
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="applications"
+              >
+                <a
+                  href="https://github.com/sachinnimbal/SUKApp"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
+                    <img
+                      src="./assets/images/ProjectImages/SUKApp.jpg"
+                      alt="SUK Android App"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                                    <img src="./assets/images/ProjectImages/Invoicing.png" alt="Invoicing"
-                                        loading="lazy">
-                                </figure>
+                  <h3 class="project-title">SUK ANDROID APP</h3>
 
-                                <h3 class="project-title">INVOICE MAKING WEB APP</h3>
+                  <p class="project-category">Java & Firebase</p>
+                </a>
+              </li>
 
-                                <p class="project-category">PHP</p>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web design"
+              >
+                <a href="https://github.com/sachinnimbal/CIE" target="_blank">
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-                            </a>
-                        </li>
+                    <img
+                      src="./assets/images/ProjectImages/CIE Entry.png"
+                      alt="CIE Entry"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                        <li class="project-item active" data-filter-item data-category="applications">
-                            <a href="https://github.com/sachinnimbal/SUKApp" target="_blank">
+                  <h3 class="project-title">CIE ENTRY SYSTEM</h3>
 
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
+                  <p class="project-category">Bootstrap</p>
+                </a>
+              </li>
 
-                                    <img src="./assets/images/ProjectImages/SUKApp.jpg" alt="SUK Android App"
-                                        loading="lazy">
-                                </figure>
+              <li
+                class="project-item active"
+                data-filter-item
+                data-category="web development"
+              >
+                <a
+                  href="https://github.com/sachinnimbal/HMS-PROJECT-SKN"
+                  target="_blank"
+                >
+                  <figure class="project-img">
+                    <div class="project-item-icon-box">
+                      <ion-icon name="eye-outline"></ion-icon>
+                    </div>
 
-                                <h3 class="project-title">SUK ANDROID APP</h3>
+                    <img
+                      src="./assets/images/ProjectImages/Hostel.png"
+                      alt="Hostel Management System"
+                      loading="lazy"
+                    />
+                  </figure>
 
-                                <p class="project-category">Java & Firebase</p>
+                  <h3 class="project-title">HOSTEL MANAGEMENT SYSTEM</h3>
 
-                            </a>
-                        </li>
+                  <p class="project-category">VB.Net & MS Access</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </article>
 
-                        <li class="project-item active" data-filter-item data-category="web design">
-                            <a href="https://github.com/sachinnimbal/CIE" target="_blank">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="./assets/images/ProjectImages/CIE Entry.png" alt="CIE Entry"
-                                        loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">CIE ENTRY SYSTEM</h3>
-
-                                <p class="project-category">Bootstrap</p>
-
-                            </a>
-                        </li>
-
-                        <li class="project-item active" data-filter-item data-category="web development">
-                            <a href="https://github.com/sachinnimbal/HMS-PROJECT-SKN" target="_blank">
-
-                                <figure class="project-img">
-                                    <div class="project-item-icon-box">
-                                        <ion-icon name="eye-outline"></ion-icon>
-                                    </div>
-
-                                    <img src="./assets/images/ProjectImages/Hostel.png" alt="Hostel Management System"
-                                        loading="lazy">
-                                </figure>
-
-                                <h3 class="project-title">HOSTEL MANAGEMENT SYSTEM
-                                </h3>
-
-                                <p class="project-category">VB.Net & MS Access</p>
-
-                            </a>
-                        </li>
-
-
-
-                    </ul>
-
-                </section>
-
-            </article>
-
-            <!--
+        <!--
               - #CONTACT
             -->
 
-            <article class="contact" data-page="contact">
+        <article class="contact" data-page="contact">
+          <header>
+            <h2 class="h2 article-title">Contact</h2>
+          </header>
 
-                <header>
-                    <h2 class="h2 article-title">Contact</h2>
-                </header>
+          <section class="contact-form">
+            <h3 class="h3 form-title">Contact Form</h3>
 
-                <section class="contact-form">
+            <form
+              action="https://formspree.io/f/xnqewabp"
+              method="POST"
+              class="form"
+              data-form
+            >
+              <div class="input-wrapper">
+                <input
+                  type="text"
+                  name="fullname"
+                  class="form-input"
+                  placeholder="Full name"
+                  required
+                  data-form-input
+                />
 
-                    <h3 class="h3 form-title">Contact Form</h3>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-input"
+                  placeholder="Email address"
+                  required
+                  data-form-input
+                />
+              </div>
 
-                    <form action="https://formspree.io/f/xnqewabp" method="POST" class="form" data-form>
+              <textarea
+                name="message"
+                class="form-input"
+                placeholder="Your Message"
+                required
+                data-form-input
+              ></textarea>
 
-                        <div class="input-wrapper">
-                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required
-                                data-form-input>
+              <button class="form-btn" type="submit" disabled data-form-btn>
+                <ion-icon name="paper-plane"></ion-icon>
+                <span>Send Message</span>
+              </button>
+            </form>
+          </section>
+        </article>
 
-                            <input type="email" name="email" class="form-input" placeholder="Email address" required
-                                data-form-input>
-                        </div>
+        <div class="modal-container" data-modal-container>
+          <div class="overlay" data-overlay></div>
 
-                        <textarea name="message" class="form-input" placeholder="Your Message" required
-                            data-form-input></textarea>
+          <section class="testimonials-modal">
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
 
-                        <button class="form-btn" type="submit" disabled data-form-btn>
-                            <ion-icon name="paper-plane"></ion-icon>
-                            <span>Send Message</span>
-                        </button>
+            <div class="modal-content">
+              <h4 class="h3 modal-title" data-modal-title></h4>
 
-                    </form>
+              <time datetime="2021-06-14"></time>
 
-                </section>
-
-            </article>
-
-            <div class="modal-container" data-modal-container>
-
-                <div class="overlay" data-overlay></div>
-
-                <section class="testimonials-modal">
-
-                    <button class="modal-close-btn" data-modal-close-btn>
-                        <ion-icon name="close-outline"></ion-icon>
-                    </button>
-
-                    <div class="modal-content">
-
-                        <h4 class="h3 modal-title" data-modal-title></h4>
-
-                        <time datetime="2021-06-14"></time>
-
-                        <div data-modal-text>
-                            <p>
-
-                            </p>
-                        </div>
-
-                    </div>
-
-                </section>
-
+              <div data-modal-text>
+                <p></p>
+              </div>
             </div>
-
+          </section>
         </div>
-
+      </div>
     </main>
 
     <script src="assets/js/script.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 
     <script>
-        function calculateAge(birthday) {
-            const birthDate = new Date(birthday);
-            const today = new Date();
-    
-            let years = today.getFullYear() - birthDate.getFullYear();
-            let months = today.getMonth() - birthDate.getMonth();
-            let days = today.getDate() - birthDate.getDate();
-    
-            // Adjust days and months if days are negative
-            if (days < 0) {
-                months--;
-                const previousMonth = new Date(today.getFullYear(), today.getMonth(), 0);
-                days += previousMonth.getDate();
-            }
-    
-            // Adjust years if months are negative
-            if (months < 0) {
-                years--;
-                months += 12;
-            }
-    
-            return `${years} years ${months} months ${days} days`;
-        }
-    
-        function formatDate(dateString) {
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            return new Date(dateString).toLocaleDateString(undefined, options);
-        }
-    
-        document.addEventListener("DOMContentLoaded", function () {
-            const birthdayElement = document.getElementById("birthday");
-            const birthday = birthdayElement.getAttribute("datetime");
-            const formattedDate = formatDate(birthday);
-            const ageText = calculateAge(birthday);
-    
-            birthdayElement.textContent = `${formattedDate}`;
-            const ageElement = document.getElementById("age");
-            ageElement.textContent = `(${ageText})`;
-        });
-    </script>
+      function calculateAge(birthday) {
+        const birthDate = new Date(birthday);
+        const today = new Date();
 
+        let years = today.getFullYear() - birthDate.getFullYear();
+        let months = today.getMonth() - birthDate.getMonth();
+        let days = today.getDate() - birthDate.getDate();
+
+        // Adjust days and months if days are negative
+        if (days < 0) {
+          months--;
+          const previousMonth = new Date(
+            today.getFullYear(),
+            today.getMonth(),
+            0
+          );
+          days += previousMonth.getDate();
+        }
+
+        // Adjust years if months are negative
+        if (months < 0) {
+          years--;
+          months += 12;
+        }
+
+        return `${years} years ${months} months ${days} days`;
+      }
+
+      function formatDate(dateString) {
+        const options = { year: "numeric", month: "long", day: "numeric" };
+        return new Date(dateString).toLocaleDateString(undefined, options);
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const birthdayElement = document.getElementById("birthday");
+        const birthday = birthdayElement.getAttribute("datetime");
+        const formattedDate = formatDate(birthday);
+        const ageText = calculateAge(birthday);
+
+        birthdayElement.textContent = `${formattedDate}`;
+        const ageElement = document.getElementById("age");
+        ageElement.textContent = `(${ageText})`;
+      });
+    </script>
 
     <script>
-        class HoverEffect {
-            constructor(el) {
-                this.el = el;
-                this.hover = false;
-                this.calculatePosition();
-                this.attachEventsListener();
-            }
-
-            attachEventsListener() {
-                this.el.addEventListener('mousemove', e => this.onMouseMove(e));
-                this.el.addEventListener('mouseleave', e => this.onMouseLeave(e));
-                window.addEventListener('resize', e => this.calculatePosition(e));
-            }
-
-            calculatePosition() {
-                gsap.set(this.el, {
-                    x: 0,
-                    y: 0,
-                    scale: 1
-                });
-                const box = this.el.getBoundingClientRect();
-                this.x = box.left + (box.width * 0.5);
-                this.y = box.top + (box.height * 0.5);
-                this.width = box.width;
-                this.height = box.height;
-            }
-
-            onMouseMove(e) {
-                let x = e.clientX - this.x;
-                let y = e.clientY - this.y;
-                let hoverArea = 0.5;
-                let distance = Math.sqrt(x * x + y * y);
-                if (distance < (this.width * hoverArea)) {
-                    if (!this.hover) {
-                        this.hover = true;
-                    }
-                    this.onHover(e.clientX, e.clientY);
-                } else if (this.hover) {
-                    this.onLeave();
-                    this.hover = false;
-                }
-            }
-
-            onMouseLeave(e) {
-                this.onLeave();
-                this.hover = false;
-            }
-
-            onHover(x, y) {
-                gsap.to(this.el, {
-                    x: (x - this.x) * 0.1,  // Adjust the multiplier to make the movement more subtle
-                    y: (y - this.y) * 0.1,  // Adjust the multiplier to make the movement more subtle
-                    scale: 1.05,            // Adjust the scale to make the effect more subtle
-                    ease: 'power2.out',
-                    duration: 0.4
-                });
-                this.el.style.zIndex = 10;
-            }
-
-            onLeave() {
-                gsap.to(this.el, {
-                    x: 0,
-                    y: 0,
-                    scale: 1,
-                    ease: 'elastic.out(1.2, 0.4)',
-                    duration: 0.7
-                });
-                this.el.style.zIndex = 1;
-            }
+      class HoverEffect {
+        constructor(el) {
+          this.el = el;
+          this.hover = false;
+          this.calculatePosition();
+          this.attachEventsListener();
         }
 
-        document.querySelectorAll('.service-item, .avatar-box, .navbar-item').forEach(item => {
-            new HoverEffect(item);
+        attachEventsListener() {
+          this.el.addEventListener("mousemove", (e) => this.onMouseMove(e));
+          this.el.addEventListener("mouseleave", (e) => this.onMouseLeave(e));
+          window.addEventListener("resize", (e) => this.calculatePosition(e));
+        }
+
+        calculatePosition() {
+          gsap.set(this.el, {
+            x: 0,
+            y: 0,
+            scale: 1,
+          });
+          const box = this.el.getBoundingClientRect();
+          this.x = box.left + box.width * 0.5;
+          this.y = box.top + box.height * 0.5;
+          this.width = box.width;
+          this.height = box.height;
+        }
+
+        onMouseMove(e) {
+          let x = e.clientX - this.x;
+          let y = e.clientY - this.y;
+          let hoverArea = 0.5;
+          let distance = Math.sqrt(x * x + y * y);
+          if (distance < this.width * hoverArea) {
+            if (!this.hover) {
+              this.hover = true;
+            }
+            this.onHover(e.clientX, e.clientY);
+          } else if (this.hover) {
+            this.onLeave();
+            this.hover = false;
+          }
+        }
+
+        onMouseLeave(e) {
+          this.onLeave();
+          this.hover = false;
+        }
+
+        onHover(x, y) {
+          gsap.to(this.el, {
+            x: (x - this.x) * 0.1, // Adjust the multiplier to make the movement more subtle
+            y: (y - this.y) * 0.1, // Adjust the multiplier to make the movement more subtle
+            scale: 1.05, // Adjust the scale to make the effect more subtle
+            ease: "power2.out",
+            duration: 0.4,
+          });
+          this.el.style.zIndex = 10;
+        }
+
+        onLeave() {
+          gsap.to(this.el, {
+            x: 0,
+            y: 0,
+            scale: 1,
+            ease: "elastic.out(1.2, 0.4)",
+            duration: 0.7,
+          });
+          this.el.style.zIndex = 1;
+        }
+      }
+
+      document
+        .querySelectorAll(".service-item, .avatar-box, .navbar-item")
+        .forEach((item) => {
+          new HoverEffect(item);
         });
     </script>
-
-
-
-</body>
-
+  </body>
 </html>
