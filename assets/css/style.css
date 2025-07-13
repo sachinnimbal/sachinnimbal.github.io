@@ -930,7 +930,8 @@ main {
  */
 
 .timeline,
-.projects {
+.projects,
+.pdf-viewer-section {
   margin-bottom: 30px;
 }
 
@@ -2218,14 +2219,6 @@ textarea.form-input::-webkit-resizer {
 /**
          * PDF VIEWER STYLES
          */
-.pdf-viewer-section {
-  margin-top: 40px;
-  padding: 25px;
-  background: #1e1e1f;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
 .pdf-viewer-header {
   display: flex;
   justify-content: space-between;
@@ -2236,7 +2229,6 @@ textarea.form-input::-webkit-resizer {
 }
 
 .pdf-viewer-title {
-  color: #ff36f8d4;
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0;
